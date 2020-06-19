@@ -115,4 +115,31 @@ if (message.content.startsWith(adminprefix + 'st')) {
       console.log(`Bot Successfully Restarted`);
   }
 
+client.on("message", message => {
+  var prefix = "^";
+if (message.content === "^help") {
+   message.channel.send('Please **Check** Your DM :mailbox_with_mail: ');
+ message.author.sendMessage(`
+     [❖═══════ اوامر عامة ═══════❖]
+** *server ~ لعرض معلومات السيرفر**
+** *id  ~ لمعرفة معلومات حسابك او معلومات حساب احد تمنشنة**
+** *avatar ~ لعرض صورتك او صورة احد تمنشنو**
+     [❖═══════ اوامر اداريه ═══════❖]
+** *mute <@mention> <Reason> ~ لعمل ميوت كتابي لحد**
+** *umute <@mention> ~ لفك الميوت الكتابي**
+** *ban <@mention> ~ ل تبنيد احد من السيرفر**
+** *kick <@mention> ~ ل طرد احد من السيرفر**
+** *bc <message> ~ لعمل برودكاست لأعضاء السيرفر**
+** *nbc ~ لأرسال رسالة لجميع السيرفر فقط ب الكلام**
+** *clear <Number> ~ لمسح الشات بعدد**
+** *cchat ~ لتسكير او قفل الشات**
+** *unchat ~ لفتح الشات**
+** *voto <#room> <message> ~ لعمل تصويت ب روم**
+** *role <@mention> <@role> ~ لأعطاء احد رتبة معينة**
+**لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
+__**Copyright FanBot**__
+`) 
+ }
+ });
+
 client.login(process.env.BOT_TOKEN);
