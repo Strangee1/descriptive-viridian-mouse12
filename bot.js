@@ -12,7 +12,7 @@ const UserBlocked = new Set();
 const prefix = '^'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Wessssst ^help",{type:'WATCHING'});
+  client.user.setActivity("Whit FanBot.",{type:'WATCHING'});
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
