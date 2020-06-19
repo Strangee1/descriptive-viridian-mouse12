@@ -12,7 +12,7 @@ const UserBlocked = new Set();
 const prefix = '^'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Website Private Bot !",{type:'WATCHING'});
+  client.user.setActivity("Wessssst ^help",{type:'WATCHING'});
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -51,7 +51,7 @@ client.on('message', message => {
 
 
 if (message.content.startsWith(prefix + "say")) {
- if (message.author.id !== '525660958761156638') return message.reply('** فقط لصاحب البوت :no_entry:  **')
+ if (message.author.id !== '516576049778130954') return message.reply('** فقط لصاحب البوت :no_entry:  **')
           message.delete()
     message.channel.sendMessage(args.join(" ")).catch(console.error);
   }
@@ -59,6 +59,13 @@ if (message.content.startsWith(prefix + "say")) {
 
 });
 
-
+client.on("message", message => {
+      if (message.content === "^ping") {
+      const embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+  message.channel.sendEmbed(embed);
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
