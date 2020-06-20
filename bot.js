@@ -226,4 +226,10 @@ client.on("message", message => {
   }
 })
 
+client.on('message', msg => {
+  if (msg.content === '^help') {      
+    msg.channel.send("If DM **Locked** I didn it send the commands <:654107963551645709:723737586941558794>")
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
