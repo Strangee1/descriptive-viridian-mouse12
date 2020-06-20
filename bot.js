@@ -95,22 +95,6 @@ __**Copyright FanBot**__
  }
  });
 
-//كود ميوزك يارب يشتغل
-
-client.on('ready',async () => {
-console.log("Starting..");
-let g = client.guilds.get("722982701594050640"); // id server
-let c = g.channels.get("723620456430567444");// id channel
-if(c.type === 'voice') {
-c.join();
-setInterval(() => {
-if(g.me.voiceChannel && g.me.voiceChannelID !== c.id || !g.me.voiceChannel) c.join();
-}, 1);
-} else {
-console.log('Failed To Join: \n The Channel Type isn "Listening."')
-}
-});
-
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
