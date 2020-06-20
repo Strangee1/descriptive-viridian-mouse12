@@ -211,7 +211,11 @@ Use: **^help [command name]** <a:4a26aa20e8a54406b3b8a72b3d10132d:72365222025546
 
 **• Commands** ~~60~~
 
-> General `)
+> **General**
+<a:677203465646243844:723715553461534798> ^id **-** ^avatar **-** ^credit **-** ^ping
+
+> **Moderatoin**
+<a:677203465646243844:723715553461534798> ^ban **-** ^kick **-** ^look **-** unban  **-** unlock **-** `)
     message.author.send(embed)
   }
 })
