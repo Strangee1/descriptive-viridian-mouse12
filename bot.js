@@ -219,7 +219,6 @@ client.on("message", message => {
   if(!message.content.startsWith(prefix)) return;
   if(message.content.startsWith(prefix + "help")) {
     let embed = new Discord.RichEmbed()
-    .setAuthor(client.user.avatarURL)
     .setColor("BLACK")
     .setDescription(` محشي كلوب `)
     message.author.send(embed)
