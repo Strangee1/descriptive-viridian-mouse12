@@ -209,10 +209,9 @@ client.on("message", message => {
     .setDescription(` **If you want more info about any command**
 Use: **^help [command name]** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660>
 
-**• Commands** `60`
+**• Commands** ~~60~~
 
-> General 
-`ban` `kick` `)
+> General `)
     message.author.send(embed)
   }
 })
