@@ -214,4 +214,16 @@ Use: **^help [command name]** <a:4a26aa20e8a54406b3b8a72b3d10132d:72365222025546
   }
 })
 
+client.on("message", message => {
+  if(message.author.bot) return;
+  if(!message.content.startsWith(prefix)) return;
+  if(message.content.startsWith(prefix + "help")) {
+    let embed = new Discord.RichEmbed()
+    .setAuthor(client.user.avatarURL)
+    .setColor("BLACK")
+    .setDescription(` محشي كلوب `)
+    message.author.send(embed)
+  }
+})
+
 client.login(process.env.BOT_TOKEN);
