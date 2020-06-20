@@ -206,14 +206,13 @@ client.on("message", message => {
     let embed = new Discord.RichEmbed()
     .setAuthor(client.user.tag,client.user.avatarURL)
     .setColor("BLACK")
-    .setDescription(`ban - a7a yua 
-2^kick fojfwe
-$$#
-$#$#
-$##$##$
-#$@#$@#$
-#$#$#
- <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> `)
+    .setDescription(` **If you want more info about any command**
+Use: **^help [command name]** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660>
+
+**• Commands** `60`
+
+> General 
+`ban` `kick` `)
     message.author.send(embed)
   }
 })
