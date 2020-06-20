@@ -68,33 +68,6 @@ client.on("message", message => {
     }
 });
 
-client.on("message", message => {
-  var prefix = "^";
-if (message.content === "^help") {
-   message.channel.send('Please **Check** Your DM <a:e0dacdd4a8b946fa9652b34cc70a12ad:723650602286055525> ');
- message.author.sendMessage(`
-     [❖═══════ اوامر عامة ═══════❖]
-** ^server ~ لعرض معلومات السيرفر**
-** ^id  ~ لمعرفة معلومات حسابك او معلومات حساب احد تمنشنة**
-** ^avatar ~ لعرض صورتك او صورة احد تمنشنو**
-     [❖═══════ اوامر اداريه ═══════❖]
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^mute <@mention> <Reason> ~ لعمل ميوت كتابي لحد**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^umute <@mention> ~ لفك الميوت الكتابي**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^ban <@mention> ~ ل تبنيد احد من السيرفر**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^kick <@mention> ~ ل طرد احد من السيرفر**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^bc <message> ~ لعمل برودكاست لأعضاء السيرفر**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^nbc ~ لأرسال رسالة لجميع السيرفر فقط ب الكلام**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^clear <Number> ~ لمسح الشات بعدد**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^cchat ~ لتسكير او قفل الشات**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^unchat ~ لفتح الشات**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^voto <#room> <message> ~ لعمل تصويت ب روم**
-** <a:4a26aa20e8a54406b3b8a72b3d10132d:723652220255469660> ^role <@mention> <@role> ~ لأعطاء احد رتبة معينة**
-**لتفعيل خاصية الترحيب قم ب انشاء روم ب اسم Welcome**
-__**Copyright FanBot**__
-`) 
- }
- });
-
 client.on('message', message => {
     if (message.content.startsWith("^bot")) {
     message.channel.send({
@@ -198,6 +171,11 @@ let BotOnline = client.channels.get("723278438064193608");// ايدي الروم
 
 });
 
+client.on('message', msg => {
+  if (msg.content === '^help') {      
+    msg.react("✅")
+  }
+});
 
 client.on("message", message => {
   if(message.author.bot) return;
